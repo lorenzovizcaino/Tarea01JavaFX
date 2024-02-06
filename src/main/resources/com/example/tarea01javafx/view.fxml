@@ -1,16 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.tarea01javafx.Controller">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="493.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tarea01javafx.Controller">
+   <children>
+      <GridPane layoutX="400.0" layoutY="155.0" prefHeight="493.0" prefWidth="718.0" style="-fx-padding: 20;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="160.0" minHeight="2.0" prefHeight="58.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="406.0" minHeight="10.0" prefHeight="372.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnInfantil" mnemonicParsing="false" onAction="#CambiarInfantil" prefHeight="25.0" prefWidth="125.0" text="INFANTIL" GridPane.halignment="CENTER" />
+            <Button fx:id="btnRomantico" mnemonicParsing="false" onAction="#CambiarRomantico" prefHeight="25.0" prefWidth="125.0" text="ROMANTICA" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Button fx:id="btnTerror" mnemonicParsing="false" onAction="#CambiarTerror" prefHeight="25.0" prefWidth="125.0" text="TERROR" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+            <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#Salir" prefHeight="25.0" prefWidth="125.0" text="Salir" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Button fx:id="btnReiniciar" mnemonicParsing="false" onAction="#Reiniciar" prefHeight="25.0" prefWidth="125.0" text="Reiniciar" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <ImageView fx:id="imagen1" fitHeight="359.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../../../neutra/1.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imagen2" fitHeight="356.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../../../neutra/1.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imagen3" fitHeight="358.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@../../../neutra/1.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
