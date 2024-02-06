@@ -47,16 +47,12 @@ public class Controller {
 
     @FXML
     void CambiarInfantil(ActionEvent event) throws InterruptedException {
-        image1=new Image("D:\\5 curso IES Teis\\DI\\2eva\\clase\\Tarea01JavaFX\\src\\main\\resources\\infantil\\1.jpg");
+        String nombreFichero = "src\\main\\resources\\infantil\\1.jpg";
+        String rutaAbsoluta = new File(nombreFichero).getAbsolutePath();
+        System.out.println(rutaAbsoluta);
 
-        image2=new Image("D:\\5 curso IES Teis\\DI\\2eva\\clase\\Tarea01JavaFX\\src\\main\\resources\\infantil\\2.jpg");
-       // image1=new Image("src"+ File.separator+"main"+File.separator+"resources"+File.separator+"infantil"+File.separator+"1.jpg");
-//        String ruta="image"+File.separator+"infantil"+File.separator+"1.jpg";
-//        String ruta2="..\\image\\infantil\\1.jpg";
-//
-//        System.out.println(ruta);
-//        System.out.println(ruta2);
-       // image1=new Image(ruta2);
+
+        image1=new Image(rutaAbsoluta);
         imagen1.setImage(image1);
 //        Timeline timeline=new Timeline(new KeyFrame(Duration.seconds(2), new EventHandler<ActionEvent>() {
 //            @Override
