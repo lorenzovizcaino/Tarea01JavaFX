@@ -5,6 +5,7 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -14,6 +15,7 @@ import javafx.util.Duration;
 
 import java.io.File;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 import static java.lang.Thread.sleep;
@@ -52,6 +54,7 @@ public class Controller implements Initializable {
     private Image image;
 
     private String rutaAbsoluta = new File("src\\main\\resources").getAbsolutePath();
+    private String rutaAbsoluta2 = new File("src\\main\\resources\\estilos\\infantil.css").getAbsolutePath();
     private final int DURACION = 5;
     private Duration duracionIntervalo = Duration.seconds(DURACION);
     private int contador = 0;
@@ -62,6 +65,19 @@ public class Controller implements Initializable {
     @FXML
     void CambiarInfantil(ActionEvent event) {
         InicializarImagenes();
+
+        Scene scene = this.AnchorPane.getScene();    //Me devuelve la scene de la interfaz
+
+        try {
+            String ruta= "com/example/tarea01javafx/estilos/infantil.css";
+            System.out.println(rutaAbsoluta2);
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("estilos/infantil.css")).toExternalForm());
+
+        }
+        catch(Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("no lo encuentro");
+        }
 
         btnRomantico.setDisable(true);
         btnTerror.setDisable(true);
