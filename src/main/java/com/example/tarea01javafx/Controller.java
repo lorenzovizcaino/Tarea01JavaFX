@@ -65,11 +65,19 @@ public class Controller implements Initializable {
         btnRomantico.setDisable(true);
         btnTerror.setDisable(true);
         contador = 1;
+        FuncionConTimeline("infantil");
 
 
+
+
+
+
+    }
+
+    private void FuncionConTimeline(String genero) {
         Timeline timeline = new Timeline(
                 new KeyFrame(Duration.seconds(0), ev0 -> {
-                    CambiarImagenes(contador, "infantil");
+                    CambiarImagenes(contador, genero);
                     Timeline timeline2 = new Timeline(new KeyFrame(Duration.seconds(1), ev2 -> {
                         CambiarTiempo();
                     }));
@@ -77,7 +85,7 @@ public class Controller implements Initializable {
                     timeline2.play();
                 }),
                 new KeyFrame(duracionIntervalo, ev -> {
-                    CambiarImagenes(contador, "infantil");
+                    CambiarImagenes(contador, genero);
                     Timeline timeline3 = new Timeline(new KeyFrame(Duration.seconds(1), ev2 -> {
                         CambiarTiempo();
                     }));
@@ -86,7 +94,7 @@ public class Controller implements Initializable {
 
                 }),
                 new KeyFrame(Duration.seconds(DURACION * 2), ev -> {
-                    CambiarImagenes(contador, "infantil");
+                    CambiarImagenes(contador, genero);
 
 
                 })
@@ -96,13 +104,11 @@ public class Controller implements Initializable {
         timeline.play();
 
         timeline.setOnFinished(ev -> {
-//            image = new Image(rutaAbsoluta+"\\infantil\\"+contador+".jpg");
-//            imagen3.setImage(image);
+
             btnRomantico.setDisable(false);
             btnTerror.setDisable(false);
+            btnInfantil.setDisable(false);
         });
-
-
     }
 
     private void CambiarTiempo() {
@@ -158,17 +164,9 @@ public class Controller implements Initializable {
         btnInfantil.setDisable(true);
         btnTerror.setDisable(true);
         contador = 1;
+        FuncionConTimeline("romantica");
 
-        Timeline timeline = new Timeline(
-                new KeyFrame(duracionIntervalo, ev -> CambiarImagenes(contador, "romantica"))
-        );
-        timeline.setCycleCount(3); //numero de repeticiones
-        timeline.play();
 
-        timeline.setOnFinished(ev -> {
-            btnInfantil.setDisable(false);
-            btnTerror.setDisable(false);
-        });
     }
 
     @FXML
@@ -176,16 +174,9 @@ public class Controller implements Initializable {
         btnInfantil.setDisable(true);
         btnRomantico.setDisable(true);
         contador = 1;
+        FuncionConTimeline("terror");
 
-        Timeline timeline = new Timeline(
-                new KeyFrame(duracionIntervalo, ev -> CambiarImagenes(contador, "terror"))
-        );
-        timeline.setCycleCount(3); //numero de repeticiones
-        timeline.play();
-        timeline.setOnFinished(ev -> {
-            btnInfantil.setDisable(false);
-            btnRomantico.setDisable(false);
-        });
+
     }
 
     @FXML
