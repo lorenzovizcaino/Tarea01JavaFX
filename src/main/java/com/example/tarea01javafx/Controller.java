@@ -65,6 +65,8 @@ public class Controller implements Initializable {
 
         btnRomantico.setDisable(true);
         btnTerror.setDisable(true);
+        btnReiniciar.setDisable(true);
+        btnSalir.setDisable(true);
         contador = 1;
         FuncionConTimeline("infantil");
 
@@ -118,6 +120,8 @@ public class Controller implements Initializable {
             btnRomantico.setDisable(false);
             btnTerror.setDisable(false);
             btnInfantil.setDisable(false);
+            btnReiniciar.setDisable(false);
+            btnSalir.setDisable(false);
         });
     }
 
@@ -191,6 +195,8 @@ public class Controller implements Initializable {
         InicializarImagenes();
         btnInfantil.setDisable(true);
         btnTerror.setDisable(true);
+        btnReiniciar.setDisable(true);
+        btnSalir.setDisable(true);
         contador = 1;
         FuncionConTimeline("romantica");
 
@@ -202,6 +208,8 @@ public class Controller implements Initializable {
         InicializarImagenes();
         btnInfantil.setDisable(true);
         btnRomantico.setDisable(true);
+        btnReiniciar.setDisable(true);
+        btnSalir.setDisable(true);
         contador = 1;
         FuncionConTimeline("terror");
 
@@ -210,12 +218,12 @@ public class Controller implements Initializable {
 
     @FXML
     void Reiniciar(ActionEvent event) {
-
+        InicializarImagenes();
     }
 
     @FXML
     void Salir(ActionEvent event) {
-
+        System.exit(0);
     }
 
     @Override
