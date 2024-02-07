@@ -1,10 +1,8 @@
 package com.example.tarea01javafx;
 
 import javafx.animation.KeyFrame;
-import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -57,11 +55,14 @@ public class Controller implements Initializable {
     private final int DURACION = 5;
     private Duration duracionIntervalo = Duration.seconds(DURACION);
     private int contador = 0;
-    private int contarTiempo = 0;
+    private int contarSegundos = 0;
+    private int contarMinutos = 0;
 
 
     @FXML
     void CambiarInfantil(ActionEvent event) {
+        InicializarImagenes();
+
         btnRomantico.setDisable(true);
         btnTerror.setDisable(true);
         contador = 1;
@@ -72,6 +73,15 @@ public class Controller implements Initializable {
 
 
 
+    }
+
+    private void InicializarImagenes() {
+        imagen1.setImage(new Image(rutaAbsoluta+"\\neutra\\1.jpg"));
+        imagen2.setImage(new Image(rutaAbsoluta+"\\neutra\\1.jpg"));
+        imagen3.setImage(new Image(rutaAbsoluta+"\\neutra\\1.jpg"));
+        contarSegundos=0;
+        contarMinutos=0;
+        tfTiempo.setText("00:00");
     }
 
     private void FuncionConTimeline(String genero) {
@@ -112,9 +122,26 @@ public class Controller implements Initializable {
     }
 
     private void CambiarTiempo() {
-        contarTiempo++;
-        System.out.println("ContarTiempo" + contarTiempo);
-        tfTiempo.setText("00:" + String.valueOf(contarTiempo));
+        contarSegundos++;
+        if(contarSegundos <=9){
+            tfTiempo.setText("0"+contarMinutos+":0" + contarSegundos);
+        }
+        if(contarSegundos >=10 && contarSegundos <=59){
+            tfTiempo.setText("0"+contarMinutos+":" + contarSegundos);
+        }
+        if(contarSegundos>59){
+            contarMinutos++;
+            contarSegundos=0;
+            if(contarMinutos<=9){
+                tfTiempo.setText("0"+contarMinutos+":0" + contarSegundos);
+            }else{
+                tfTiempo.setText(contarMinutos+":0" + contarSegundos);
+            }
+
+
+        }
+
+
     }
 
     private void CambiarImagenes(int selecion, String genero) {
@@ -161,6 +188,7 @@ public class Controller implements Initializable {
 
     @FXML
     void CambiarRomantico(ActionEvent event) {
+        InicializarImagenes();
         btnInfantil.setDisable(true);
         btnTerror.setDisable(true);
         contador = 1;
@@ -171,6 +199,7 @@ public class Controller implements Initializable {
 
     @FXML
     void CambiarTerror(ActionEvent event) {
+        InicializarImagenes();
         btnInfantil.setDisable(true);
         btnRomantico.setDisable(true);
         contador = 1;
