@@ -44,7 +44,7 @@
                   <Image url="@../../../neutra/1.jpg" />
                </image>
             </ImageView>
-            <TextField fx:id="tfTiempo" alignment="CENTER" prefHeight="44.0" prefWidth="226.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <TextField fx:id="tfTiempo" alignment="CENTER" prefHeight="44.0" prefWidth="226.0" text="00:00" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font name="Arial Black" size="24.0" />
                </font>
