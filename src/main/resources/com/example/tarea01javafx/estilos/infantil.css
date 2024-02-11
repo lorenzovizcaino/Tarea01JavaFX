@@ -13,7 +13,7 @@ Button {
     -fx-border-width: 3;
     -fx-font-family: "Comic Sans MS";
     -fx-font-weight:bold;
-    -fx-font-size: 15px;
+    -fx-font-size: 22px;
     -fx-background-radius: 20 20 20 20;
     -fx-border-radius: 20 20 20 20;
 }
@@ -25,3 +25,4 @@ Button {
     -fx-border-radius: 10 10 10 10;
 
 }
+

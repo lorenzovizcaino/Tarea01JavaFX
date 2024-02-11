@@ -1,6 +1,6 @@
 @font-face {
-font-family: 'Romantica';
-src: url('file:src/main/resources/com/example/tarea01javafx/fonts/Romantica.otf');
+font-family: 'Terror';
+src: url('file:src/main/resources/com/example/tarea01javafx/fonts/BLOODY.TTF');
 
 }
 
@@ -15,19 +15,20 @@ src: url('file:src/main/resources/com/example/tarea01javafx/fonts/Romantica.otf'
 }
 
 Button {
-    -fx-background-color: #f4f3f8;
-    -fx-border-color:#f23356;
+    -fx-background-color: #0e0e0e;
+    -fx-border-color:#e6f1f9;
+    -fx-text-fill: #e6f1f9;
     -fx-border-width: 3;
-    -fx-font-family: 'Romantica';
+    -fx-font-family: 'BLOODY';
     -fx-font-weight:bold;
-    -fx-font-size: 20px;
+    -fx-font-size: 30px;
     -fx-background-radius: 20 20 20 20;
     -fx-border-radius: 20 20 20 20;
 }
 
 #tfTiempo{
-    -fx-background-color: #f23356;
-    -fx-text-fill: #f4f3f8;  /*  color de la fuente*/
+    -fx-background-color: #fddd07;
+    -fx-text-fill: #0e0e0e;  /*  color de la fuente*/
     -fx-background-radius: 10 10 10 10;
     -fx-border-radius: 10 10 10 10;
 

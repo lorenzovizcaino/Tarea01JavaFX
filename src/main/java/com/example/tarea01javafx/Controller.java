@@ -259,6 +259,18 @@ public class Controller implements Initializable {
     @FXML
     void Reiniciar(ActionEvent event) {
         InicializarImagenes();
+        Scene scene = this.AnchorPane.getScene();    //Me devuelve la scene de la interfaz
+
+        try {
+
+            scene.getStylesheets().clear();
+
+
+        }
+        catch(Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("no lo encuentro");
+        }
     }
 
     @FXML
