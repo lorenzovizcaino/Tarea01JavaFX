@@ -1,7 +1,27 @@
 .root{
-    -fx-background-color:#7fb3d5;
-    -fx-background-image: url('C:\Users\a14manuelalv\2DAM\DI\2eva\Tarea01JavaFX\src\main\resources\neutra\1.jpg');
-    -fx-font-family:"serif";
-    -fx-font-size: 18px;
+
+    -fx-background-image: url('../fondos/fondoinfantil.jpg');
+    -fx-background-size: cover;
+    -fx-font-family:"arial";
+    -fx-font-size: 16px;
 
     }
+
+Button {
+    -fx-background-color: #9666F4;
+    -fx-border-color:#33F243;
+    -fx-border-width: 3;
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-weight:bold;
+    -fx-font-size: 15px;
+    -fx-background-radius: 20 20 20 20;
+    -fx-border-radius: 20 20 20 20;
+}
+
+#tfTiempo{
+    -fx-background-color: #00DCC3;
+    -fx-text-fill: #3535E6;  /*  color de la fuente*/
+    -fx-background-radius: 10 10 10 10;
+    -fx-border-radius: 10 10 10 10;
+
+}

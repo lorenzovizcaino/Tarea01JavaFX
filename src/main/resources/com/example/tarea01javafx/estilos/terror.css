@@ -1,0 +1,34 @@
+@font-face {
+font-family: 'Romantica';
+src: url('file:src/main/resources/com/example/tarea01javafx/fonts/Romantica.otf');
+
+}
+
+
+.root{
+
+    -fx-background-image: url('../fondos/fondoterror.jpg');
+    -fx-background-size: cover;
+    -fx-font-family:"arial";
+    -fx-font-size: 16px;
+
+}
+
+Button {
+    -fx-background-color: #f4f3f8;
+    -fx-border-color:#f23356;
+    -fx-border-width: 3;
+    -fx-font-family: 'Romantica';
+    -fx-font-weight:bold;
+    -fx-font-size: 20px;
+    -fx-background-radius: 20 20 20 20;
+    -fx-border-radius: 20 20 20 20;
+}
+
+#tfTiempo{
+    -fx-background-color: #f23356;
+    -fx-text-fill: #f4f3f8;  /*  color de la fuente*/
+    -fx-background-radius: 10 10 10 10;
+    -fx-border-radius: 10 10 10 10;
+
+}

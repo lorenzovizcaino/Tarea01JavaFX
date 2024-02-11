@@ -69,8 +69,8 @@ public class Controller implements Initializable {
         Scene scene = this.AnchorPane.getScene();    //Me devuelve la scene de la interfaz
 
         try {
-            String ruta= "com/example/tarea01javafx/estilos/infantil.css";
-            System.out.println(rutaAbsoluta2);
+
+            scene.getStylesheets().clear();
             scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("estilos/infantil.css")).toExternalForm());
 
         }
@@ -209,6 +209,18 @@ public class Controller implements Initializable {
     @FXML
     void CambiarRomantico(ActionEvent event) {
         InicializarImagenes();
+        Scene scene = this.AnchorPane.getScene();    //Me devuelve la scene de la interfaz
+
+        try {
+
+            scene.getStylesheets().clear();
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("estilos/romantica.css")).toExternalForm());
+
+        }
+        catch(Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("no lo encuentro");
+        }
         btnInfantil.setDisable(true);
         btnTerror.setDisable(true);
         btnReiniciar.setDisable(true);
@@ -222,6 +234,18 @@ public class Controller implements Initializable {
     @FXML
     void CambiarTerror(ActionEvent event) {
         InicializarImagenes();
+        Scene scene = this.AnchorPane.getScene();    //Me devuelve la scene de la interfaz
+
+        try {
+
+            scene.getStylesheets().clear();
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("estilos/terror.css")).toExternalForm());
+
+        }
+        catch(Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("no lo encuentro");
+        }
         btnInfantil.setDisable(true);
         btnRomantico.setDisable(true);
         btnReiniciar.setDisable(true);
