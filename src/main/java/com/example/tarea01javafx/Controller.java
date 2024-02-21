@@ -184,18 +184,26 @@ public class Controller implements Initializable {
         image = new Image(rutaImagenes);
 
 
+
+
         switch (selecion) {
             case 1:
-
+                imagen1.setFitWidth(650);
+                imagen1.setFitHeight(325);
                 imagen1.setImage(image);
+
                 break;
             case 2:
-
+                imagen2.setFitWidth(650);
+                imagen2.setFitHeight(325);
                 imagen2.setImage(image);
+
                 break;
             case 3:
-
+                imagen3.setFitWidth(650);
+                imagen3.setFitHeight(325);
                 imagen3.setImage(image);
+
                 break;
 
 
